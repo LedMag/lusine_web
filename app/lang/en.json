@@ -1,6 +1,8 @@
 {
-    "header.nav.home": "Home",
-    "header.nav.category": "Category",
-    "header.nav.about": "About",
-    "header.nav.contacts": "Contacts"
+    "home": "Home",
+    "category": "Category",
+    "about": "About",
+    "contacts": "Contacts",
+    "catalog": "Catalog",
+    "menu": "menu"
 }

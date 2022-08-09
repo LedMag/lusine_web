@@ -1,6 +1,8 @@
 {
-    "header.nav.home": "Inicio",
-    "header.nav.category": "Categoría",
-    "header.nav.about": "Quien Soy",
-    "header.nav.contacts": "Contactos"
+    "home": "Inicio",
+    "category": "Categoría",
+    "about": "Quien Soy",
+    "contacts": "Contactos",
+    "catalog": "Catálogo",
+    "menu": "menu"
 }

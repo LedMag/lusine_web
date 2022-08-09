@@ -1,6 +1,8 @@
 {
-    "header.nav.home": "Главная",
-    "header.nav.category": "Категория",
-    "header.nav.about": "Обо мне",
-    "header.nav.contacts": "Контакты"
+    "home": "Главная",
+    "category": "Категория",
+    "about": "Обо мне",
+    "contacts": "Контакты",
+    "catalog": "Каталог",
+    "menu": "меню"
 }

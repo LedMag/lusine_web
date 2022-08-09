@@ -1,27 +1,27 @@
 <header class="header">
-  <div class="header__logo">
-    <a data-url="home">
+  <div class="header__top">
+    <a class="header__logo" data-url="home">
       <img src="/images/logo.png" alt="Logo" class="header__img">
     </a>
-  </div>
-  <div class="header__buttons">
-    <button class="header__button btn" data-lang="es">es</button>
-    <button class="header__button btn" data-lang="en">en</button>
-    <button class="header__button btn active" data-lang="ru">ru</button>
+    <div id="langs" class="header__langs">
+      <a href="{{ route(Route::currentRouteName(), 'en') }}" class="header__lang {{ app()->getLocale() === 'en' ? 'activeLang' : '' }}">en</a>
+      <a href="{{ route(Route::currentRouteName(), 'es') }}" class="header__lang {{ app()->getLocale() === 'es' ? 'activeLang' : '' }}">es</a>
+      <a href="{{ route(Route::currentRouteName(), 'ru') }}" class="header__lang {{ app()->getLocale() === 'ru' ? 'activeLang' : '' }}">ru</a>
+    </div>
   </div>
   <nav class="header__nav spr">
     <ul class="header__menu spr-inner">
       <li class="header__item">
-        <a href="{{ url('/home')}}" class="header__link">{{ __("header.nav.home") }}</a>
+        <a href="{{ route('home', app()->getLocale()) }}" class="header__link {{ Route::is('home') ? 'active__link' : '' }} ">{{ __("home") }}</a>
       </li>
       <li class="header__item">
-        <a href="{{ url('/category')}}" class="header__link">{{ __("header.nav.category") }}</a>
+        <a href="{{ route('catalog', app()->getLocale()) }}" class="header__link {{ Route::is('catalog') ? 'active__link' : '' }} ">{{ __("catalog") }}</a>
       </li>
       <li class="header__item">
-        <a href="{{ url('/about')}}" class="header__link">{{ __("header.nav.about") }}</a>
+        <a href="{{ route('about', app()->getLocale()) }}" class="header__link {{ Route::is('about') ? 'active__link' : '' }} ">{{ __("about") }}</a>
       </li>
       <li class="header__item">
-        <a href="{{ url('/contacts')}}" class="header__link">{{ __("header.nav.contacts") }}</a>
+        <a href="{{ route('contacts', app()->getLocale()) }}" class="header__link {{ Route::is('contacts') ? 'active__link' : '' }} ">{{ __("contacts") }}</a>
       </li>
     </ul>
   </nav>
