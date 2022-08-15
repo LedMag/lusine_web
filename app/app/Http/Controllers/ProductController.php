@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class AdminController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,32 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages.admin');
-    }
-
-    public function home()
-    {
-        $urls = Storage::files('public/slider/');
-        $files = [];
-        foreach( $urls as $name ){
-            array_push($files, basename($name) );
-        };
-        return view('pages.admin.home', ['files' => $files]);
-    }
-
-    public function catalog()
-    {
-        return view('pages.admin.catalog');
-    }
-
-    public function about()
-    {
-        return view('pages.admin.about');
-    }
-
-    public function contacts()
-    {
-        return view('pages.admin.contacts');
+        //
     }
 
     /**

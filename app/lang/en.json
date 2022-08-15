@@ -10,6 +10,8 @@
     "logout": "Logout",
     "registration": "Registration",
     "name": "Name",
+    "image": "Image",
+    "description": "Description",
     "email": "Email",
     "password": "Password",
     "error.registration": "An error occurred during registration",

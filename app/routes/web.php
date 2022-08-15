@@ -45,23 +45,18 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('admin/login', [LoginController::class, 'index'])->name('admin.login');
     
     Route::post('admin/login', [LoginController::class, 'login'])->name('admin.login.post');
-    
-    Route::get('admin/registration', [RegistrationController::class, 'index'])->name('admin.registration');
-    
-    Route::post('admin/registration', [RegistrationController::class, 'save'])->name('admin.registration.post');
-
 
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     
-        Route::get('/', [MainController::class, 'index'])->name('admin');
+        Route::get('/', [AdminController::class, 'index'])->name('admin');
     
-        Route::get('home', [HomeController::class, 'index'])->name('admin.home');
+        Route::get('home', [AdminController::class, 'home'])->name('admin.home');
     
-        Route::get('about', [AboutController::class, 'index'])->name('admin.about');
+        Route::get('about', [AdminController::class, 'about'])->name('admin.about');
     
-        Route::get('catalog', [CatalogController::class, 'index'])->name('admin.catalog');
+        Route::get('catalog', [AdminController::class, 'catalog'])->name('admin.catalog');
     
-        Route::get('contacts', [ContactsController::class, 'index'])->name('admin.contacts');
+        Route::get('contacts', [AdminController::class, 'contacts'])->name('admin.contacts');
     
         // Route::get('/login', [LoginController::class, 'index'])->name('admin.login');
     
@@ -69,9 +64,9 @@ Route::group(['prefix' => '{language}'], function () {
     
         Route::get('/logout', [LogoutController::class, 'index'])->name('admin.logout');
     
-        // Route::get('/registration', [RegistrationController::class, 'index'])->name('admin.registration');
+        Route::get('/registration', [RegistrationController::class, 'index'])->name('admin.registration');
     
-        // Route::post('/registration', [RegistrationController::class, 'save'])->name('admin.registration.post');
+        Route::post('/registration', [RegistrationController::class, 'save'])->name('admin.registration.post');
 
     });
 
